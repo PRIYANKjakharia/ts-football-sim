@@ -14,7 +14,7 @@ const teamA: Team = new Team("Barca", listA);
 
 const t1: Player = new Striker("rolando");
 const t2: Player = new Defender("zlatan");
-const t3: Player = new MidFielder("mbappu");
+const t3: Player = new MidFielder("mbappe");
 const t4: Player = new GoalKeeper("rahul");
 
 

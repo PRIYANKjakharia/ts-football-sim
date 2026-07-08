@@ -2,19 +2,16 @@ import { Striker, Defender, MidFielder, GoalKeeper, Player } from "./player/inde
 import { Team } from "./team/Team.js";
 import { Match } from "./match/Match.js";
 import { HindiCommentary } from "./commentary/HindiCommentary.js";
-// Instantiate Team A Players
 const p1 = new Striker("sunil");
 const p2 = new Defender("romos");
 const p3 = new MidFielder("messi");
 const p4 = new GoalKeeper("dhoni");
 const listA = [p1, p2, p3, p4];
 const teamA = new Team("Barca", listA);
-// Instantiate Team B Players
 const t1 = new Striker("rolando");
 const t2 = new Defender("zlatan");
-const t3 = new MidFielder("mbappu");
+const t3 = new MidFielder("mbappe");
 const t4 = new GoalKeeper("rahul");
-// FIXED: Populated listB and teamB with their own unique player lists
 const listB = [t1, t2, t3, t4];
 const teamB = new Team("Real Medrid", listB);
 const match = new Match(teamA, teamB, new HindiCommentary());
