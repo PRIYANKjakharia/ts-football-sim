@@ -26,7 +26,7 @@ const match: Match = new Match(teamA, teamB, new HindiCommentary());
 // Game simulation sequence
 p3.specialAbility();
 match.commentary.goodPass(p3);
-
+    
 p1.specialAbility();
 match.commentary.goodShoot(p1);
 match.commentary.Goal(p1);
