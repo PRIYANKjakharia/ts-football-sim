@@ -157,7 +157,7 @@ Available implementations:
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/PRIYANKjakharia/ts-football-sim.git
 ```
 
 Install dependencies
