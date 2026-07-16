@@ -1,67 +1,69 @@
-# ⚽ Football Match Simulation (TypeScript OOP)
+# ⚽ Football Match Simulator
 
-A command-line football match simulation built using **TypeScript** to demonstrate Object-Oriented Programming concepts such as **Abstraction, Inheritance, Encapsulation, Polymorphism, and Composition**.
-
-The application simulates a football match between two teams with different player roles and multilingual commentary.
+A command-line football match simulator built using **TypeScript** that demonstrates core **Object-Oriented Programming (OOP)** concepts. Users can create teams, assign player roles, choose commentary language, and simulate football actions through an interactive terminal menu.
 
 ---
 
 ## Features
 
-- Team creation
-- Different player roles
+- Interactive command-line interface
+- Dynamic team creation
+- Custom player creation
+- Multiple player roles
   - Striker
-  - Midfielder
+  - MidFielder
   - Defender
-  - Goalkeeper
-- Goal tracking
-- Match result generation
-- Man of the Match support
+  - GoalKeeper
 - English and Hindi commentary
-- Demonstrates major OOP principles
+- Live scoreboard
+- Goal tracking
+- Save tracking
+- Winner declaration
+- Man of the Match selection
 
 ---
 
-## OOP Concepts Used
+## OOP Concepts Demonstrated
 
 ### Abstraction
-- `Player` is an abstract class.
-- `Commentary` is an abstract class.
+- `Player`
+- `Commentary`
+
+Both are implemented as abstract classes.
 
 ### Inheritance
-- `Striker`
-- `MidFielder`
-- `Defender`
-- `GoalKeeper`
 
-inherit from `Player`.
+Player hierarchy:
 
-`EnglishCommentary` and `HindiCommentary` inherit from `Commentary`.
+- Striker
+- MidFielder
+- Defender
+- GoalKeeper
+
+Commentary implementations:
+
+- EnglishCommentary
+- HindiCommentary
 
 ### Encapsulation
-Player statistics such as:
 
-- Goals
-- Saves
-- Yellow Cards
-- Red Cards
-- Team
-
-are maintained using private fields with getters and setters.
+Player statistics such as goals, saves, cards, and team information are maintained using private fields with controlled access through getters and setters.
 
 ### Polymorphism
-Each player implements its own version of `specialAbility()`.
 
-Example:
+Each player role overrides `specialAbility()` to perform role-specific actions.
 
-- Striker shoots
-- Goalkeeper saves
-- Midfielder performs long passes
-- Defender tackles
+Examples:
+
+- Striker → Shoot
+- Defender → Tackle
+- MidFielder → Long Pass
+- GoalKeeper → Save
 
 ### Composition
-- A `Team` contains multiple `Player` objects.
-- A `Match` contains two `Team` objects, a `Score`, and a `Commentary` object.
+
+- A Team is composed of multiple Player objects.
+- A Match contains two Team objects, a Score object, and a Commentary object.
 
 ---
 
@@ -95,53 +97,39 @@ src
 
 ---
 
-## Class Overview
+## Gameplay
 
-### Player
-Base abstract class containing:
+When the application starts, users can:
 
-- Name
-- Type
-- Team
-- Goals
-- Saves
-- Yellow Cards
-- Red Cards
+1. Create Team 1
+2. Create Team 2
+3. Add players dynamically
+4. Assign player roles
+5. Select commentary language
+6. Simulate the match using the interactive menu
 
-### Team
+---
 
-Maintains:
+## Available Actions
 
-- Team name
-- Player list
-- Matches played
-- Matches won
-- Total goals
-- Total saves
-- Goalkeeper
+- Pass
+- Shoot
+- Save
+- Tackle
+- Long Pass
+- Run
+- Celebrate
+- Show Score
+- End Match
 
-### Match
+### Role-specific Actions
 
-Responsible for:
-
-- Holding both teams
-- Managing score
-- Determining winner
-- Man of the Match
-- Commentary
-
-### Score
-
-Tracks goals scored by each team.
-
-### Commentary
-
-Provides match commentary.
-
-Available implementations:
-
-- English Commentary
-- Hindi Commentary
+| Role | Special Ability |
+|------|-----------------|
+| Striker | Shoot |
+| Defender | Tackle |
+| MidFielder | Long Pass |
+| GoalKeeper | Save |
 
 ---
 
@@ -153,12 +141,6 @@ Available implementations:
 ---
 
 ## Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/PRIYANKjakharia/ts-football-sim.git
-```
 
 Install dependencies
 
@@ -172,7 +154,7 @@ Compile TypeScript
 npx tsc
 ```
 
-Run the project
+Run the application
 
 ```bash
 node dist/main.js
@@ -180,33 +162,41 @@ node dist/main.js
 
 ---
 
-## Sample Flow
+## Sample Workflow
 
-- Create players
-- Create Team A
-- Create Team B
-- Start match
-- Players perform actions
-- Commentary announces events
-- Goals are updated
-- Winner is declared
+```text
+Create Team
+↓
+
+Add Players
+↓
+
+Select Player Roles
+↓
+
+Choose Commentary Language
+↓
+
+Start Match
+↓
+
+Perform Match Actions
+↓
+
+View Live Score
+↓
+
+End Match
+↓
+
+Winner & Man of the Match
+```
 
 ---
 
-## Current Limitations
+## Future Improvements
 
-- Teams are hardcoded
-- Players are hardcoded
-- Match events are manually scripted
-
----
-
-## Future Enhancements
-
-- Interactive command-line interface
-- Dynamic team creation
-- Player selection using user input
-- Match statistics
-- League/Tournament mode
-- File-based data storage
-- Better scorecard generation
+- Match history
+- Player statistics dashboard
+- Input validation improvements
+- Save/load matches
